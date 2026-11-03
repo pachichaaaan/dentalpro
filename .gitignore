@@ -1,0 +1,8 @@
+# dependencies & build output (recreate with `npm install` and `npm run build`)
+node_modules/
+dist/
+.vite/
+
+# OS / editor clutter
+.DS_Store
+*.log
