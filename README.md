@@ -11,7 +11,17 @@ npm run build      # production files → dist/
 npm run preview    # serve dist/ locally
 ```
 
-`dist/` is a plain static site. Deploy it anywhere: drag the folder onto [Netlify Drop](https://app.netlify.com/drop), or use Vercel, Cloudflare Pages or any web host.
+**Live site:** https://pachichaaaan.github.io/dentalpro/ (GitHub Pages, served from the `gh-pages` branch).
+
+To publish changes, run:
+
+```bash
+npm run deploy
+```
+
+This builds the site and replaces the `gh-pages` branch with the new `dist/`. Commit your source changes to `main` as usual.
+
+`dist/` is a plain static site, so it can also be hosted anywhere else (Netlify, Vercel, Cloudflare Pages…).
 
 ## Before going live
 
@@ -21,7 +31,7 @@ npm run preview    # serve dist/ locally
 | Add phone number, clinic hours and Facebook/Messenger link. These weren't publicly available. | `index.html` → `.visit__locations` |
 | Double-check both addresses. They came from public clinic directory listings. | `index.html` → Visit section + JSON-LD in `<head>` |
 | Review Dr. Alyssa's bio wording. | `index.html` → `#doctor` |
-| Put your real domain in front of the share image URL, e.g. `https://dentalpro.ph/assets/img/og.jpg`. | `index.html` → `og:image` |
+| If you move to your own domain, update the share-image URLs (they currently point at GitHub Pages). | `index.html` → `og:url`, `og:image` |
 
 ## How it's built
 
