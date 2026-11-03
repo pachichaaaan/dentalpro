@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Dental Pro — Cosmetic &amp; Family Dentistry · Dr. Alyssa Marie V. Mamaril</title>
+    <meta name="description" content="Dental Pro Dental Clinic by Dr. Alyssa Marie V. Mamaril, cosmetic dentist. Teeth whitening, braces, deep cleaning, aesthetic restorations, dentures and bridges in Talavera and Santo Domingo, Nueva Ecija." />
+    <meta name="theme-color" content="#90D8DA" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+    <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dental Pro — Confidence, beautifully made" />
+    <meta property="og:description" content="Cosmetic &amp; family dentistry by Dr. Alyssa Marie V. Mamaril. Talavera &amp; Santo Domingo, Nueva Ecija." />
+    <meta property="og:url" content="https://pachichaaaan.github.io/dentalpro/" />
+    <meta property="og:image" content="https://pachichaaaan.github.io/dentalpro/assets/img/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preload" href="./assets/model/tooth.glb" as="fetch" type="model/gltf-binary" crossorigin />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Dental PRO Dental Clinic",
+        "description": "Cosmetic and family dentistry by Dr. Alyssa Marie V. Mamaril.",
+        "address": [
+          { "@type": "PostalAddress", "streetAddress": "Diaz St", "addressLocality": "Talavera", "postalCode": "3114", "addressRegion": "Nueva Ecija", "addressCountry": "PH" },
+          { "@type": "PostalAddress", "streetAddress": "Pedro Pascual St", "addressLocality": "Santo Domingo", "addressRegion": "Nueva Ecija", "addressCountry": "PH" }
+        ],
+        "employee": { "@type": "Person", "name": "Dr. Alyssa Marie V. Mamaril", "jobTitle": "Cosmetic Dentist" }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is teeth whitening safe?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, when it's done professionally. We check your teeth first, protect your gums and control the strength of the gel throughout." } },
+          { "@type": "Question", "name": "How often should I get a cleaning?", "acceptedAnswer": { "@type": "Answer", "text": "Every six months suits most people. If your gums need extra attention, we'll suggest a schedule that fits you." } },
+          { "@type": "Question", "name": "Do braces hurt?", "acceptedAnswer": { "@type": "Answer", "text": "Expect some pressure for a few days after fitting or adjustments. It passes quickly, and we'll show you simple ways to stay comfortable." } },
+          { "@type": "Question", "name": "Will a filling or repair be noticeable?", "acceptedAnswer": { "@type": "Answer", "text": "Tooth-coloured restorations are shade-matched and polished to blend in with your natural teeth, so they're virtually invisible." } },
+          { "@type": "Question", "name": "Which clinic should I choose?", "acceptedAnswer": { "@type": "Answer", "text": "Whichever is easier for you: Talavera or Santo Domingo. Just pick one when you book." } },
+          { "@type": "Question", "name": "How do I book?", "acceptedAnswer": { "@type": "Answer", "text": "Fill in the booking form on this page and tap Send via Messenger. Your details go straight to our Facebook inbox, and we'll reply to confirm your appointment." } }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-js2UZtz5.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/motion-C-aOaZEx.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-Csaki28D.css">
+  </head>
+
+  <body class="is-loading">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ LOADER ============ -->
+    <div class="loader" aria-hidden="true">
+      <div class="loader__center">
+        <div class="loader__mono"><svg class="svg-mono" viewBox="450 -12 1307 1039" aria-hidden="true" focusable="false" fill="currentColor"><g transform="translate(0,1352) scale(0.1,-0.1)"><path pathLength="1" d="M9770 13506 c-19 -7 -42 -26 -52 -42 -15 -27 -17 -261 -19 -3289 -3 -3529 -7 -3297 48 -3311 52 -14 182 114 361 356 89 119 134 197 187 325 86 204 115 308 134 480 15 128 24 5367 10 5418 -19 70 -27 72 -349 74 -212 2 -294 -1 -320 -11z"/><path pathLength="1" d="M8359 11466 c-3 -3 -198 -10 -435 -16 -982 -26 -1116 -30 -1254 -39 -309 -22 -441 -47 -685 -131 -344 -119 -661 -340 -887 -620 -241 -299 -364 -646 -409 -1159 -15 -170 -15 -1803 0 -1971 29 -327 75 -559 151 -765 173 -465 496 -835 895 -1024 144 -69 138 -66 230 -97 158 -53 281 -74 560 -96 225 -18 1827 -18 2085 0 345 25 474 42 615 82 50 14 111 30 148 37 15 3 30 9 33 14 3 5 14 9 25 9 10 0 27 4 37 9 16 8 47 21 95 40 46 18 166 78 276 138 63 35 115 63 117 63 17 0 331 208 396 263 181 152 201 170 293 271 207 226 387 522 504 826 18 47 37 94 41 105 19 48 46 141 79 273 25 99 30 120 41 167 6 28 15 66 20 85 5 19 14 62 20 95 6 33 15 78 20 100 15 69 24 118 116 670 27 163 96 431 133 520 5 11 14 36 21 55 42 121 127 294 215 440 121 201 210 311 345 428 187 162 308 242 516 343 139 67 163 78 222 100 12 5 32 13 45 18 12 6 63 23 112 39 86 28 131 40 228 61 23 5 69 15 102 23 47 10 218 13 820 11 980 -3 1285 -16 1475 -65 257 -65 497 -221 643 -418 26 -36 55 -74 64 -84 62 -75 178 -377 201 -521 6 -38 16 -101 23 -140 18 -110 29 -1995 13 -2190 -19 -219 -40 -334 -86 -475 -22 -70 -87 -206 -118 -251 -11 -15 -20 -30 -20 -33 0 -3 -28 -42 -61 -86 -147 -192 -348 -339 -559 -409 -252 -84 -466 -107 -880 -98 -888 20 -1397 28 -1483 23 -104 -7 -149 -22 -168 -57 -20 -38 -27 -132 -20 -287 l6 -152 32 -31 31 -32 289 -9 c342 -11 1655 -3 1833 11 119 9 191 19 325 42 33 5 77 12 98 15 20 4 40 10 43 15 3 5 18 9 34 9 16 0 32 4 35 10 3 6 15 10 26 10 10 0 27 4 37 9 9 5 55 24 102 42 191 74 345 169 530 327 225 193 413 466 525 762 67 177 100 320 130 560 28 219 41 1675 19 2065 -25 461 -149 849 -376 1183 -130 190 -360 406 -560 525 -290 173 -552 259 -893 292 -279 28 -1120 42 -1530 26 -576 -22 -837 -58 -1169 -162 -125 -39 -176 -60 -301 -120 -284 -138 -599 -417 -822 -729 -65 -92 -153 -227 -153 -236 0 -3 -13 -24 -28 -47 -25 -38 -106 -198 -145 -287 -102 -232 -190 -531 -238 -800 -5 -30 -14 -80 -20 -110 -10 -53 -19 -109 -39 -250 -6 -36 -15 -92 -20 -125 -6 -33 -15 -89 -21 -125 -18 -114 -29 -174 -38 -220 -19 -92 -33 -166 -41 -210 -12 -66 -29 -150 -40 -195 -5 -22 -13 -58 -18 -80 -14 -60 -58 -188 -91 -258 -34 -74 -207 -361 -271 -448 -93 -128 -269 -290 -500 -460 -118 -87 -136 -98 -354 -231 -223 -135 -462 -198 -907 -238 -183 -16 -1681 -12 -1979 5 -233 14 -282 19 -410 43 -148 28 -352 113 -485 203 -230 154 -403 427 -480 754 -9 39 -18 79 -21 90 -39 139 -45 366 -34 1380 9 940 10 988 31 1095 41 216 103 387 203 565 53 95 85 136 186 235 184 181 416 305 655 349 240 44 235 44 1343 50 l1074 6 28 32 c44 49 52 96 48 292 -3 156 -5 180 -24 211 -35 61 -52 65 -319 68 -132 2 -243 1 -246 -2z"/><path pathLength="1" d="M12333 9659 c-173 -90 -244 -144 -319 -240 -87 -113 -149 -266 -185 -454 -34 -180 -34 -190 -34 -1555 0 -745 -4 -1922 -9 -2616 -5 -693 -5 -1279 -1 -1301 10 -62 42 -88 124 -102 88 -14 308 -14 426 0 118 14 149 36 165 115 9 43 10 385 4 1398 -10 1598 -10 1570 7 2856 17 1263 17 1831 0 1883 -11 32 -50 67 -75 67 -3 0 -50 -23 -103 -51z"/></g></svg></div>
+        <div class="loader__bar"><i></i></div>
+      </div>
+      <p class="loader__tag">Confidence, <em>beautifully</em> made.</p>
+      <p class="loader__count"><b>0</b>%</p>
+    </div>
+
+    <!-- ============ STAGE (hero video + WebGL) ============ -->
+    <div class="stage" aria-hidden="true">
+      <video class="stage__video" muted loop playsinline preload="auto" poster="./assets/video/aqua-silk-poster.webp" src="./assets/video/aqua-silk.mp4"></video>
+      <div class="stage__shade"></div>
+    </div>
+    <div class="glow" aria-hidden="true"><i></i><i></i></div>
+    <canvas class="webgl" aria-hidden="true"></canvas>
+
+    <div class="hotspots" aria-hidden="true">
+      <div class="hotspot" data-hotspot="0"><span class="hotspot__dot"></span><span class="hotspot__line"></span><span class="hotspot__label"><b>Lustre</b><small>A natural, polished sheen</small></span></div>
+      <div class="hotspot" data-hotspot="1"><span class="hotspot__dot"></span><span class="hotspot__line"></span><span class="hotspot__label"><b>Contour</b><small>Shaped with precision</small></span></div>
+      <div class="hotspot" data-hotspot="2"><span class="hotspot__dot"></span><span class="hotspot__line"></span><span class="hotspot__label"><b>Foundation</b><small>Healthy roots and gums</small></span></div>
+      <div class="hotspot" data-story-label="0"><span class="hotspot__dot"></span><span class="hotspot__line"></span><span class="hotspot__label"><b>Enamel</b><small>The hardest tissue in the body</small></span></div>
+      <div class="hotspot" data-story-label="1"><span class="hotspot__dot"></span><span class="hotspot__line"></span><span class="hotspot__label"><b>Dentin</b><small>The resilient, living core</small></span></div>
+      <div class="hotspot" data-story-label="2"><span class="hotspot__dot"></span><span class="hotspot__line"></span><span class="hotspot__label"><b>Pulp</b><small>Nerves and blood supply</small></span></div>
+    </div>
+
+    <!-- Tooth cursor (mouse/trackpad only) -->
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor__ring"></div>
+      <div class="cursor__tooth"><svg viewBox="0 0 24 24"><path d="M7 3C4.8 3 3 4.8 3 7.2c0 2 .8 3.3 1.4 4.6.6 1.4.8 3 1.1 5.2.3 2.2.8 4 2.2 4 1.3 0 1.6-1.7 1.9-3.4.3-1.6.6-3.1 2.4-3.1s2.1 1.5 2.4 3.1c.3 1.7.6 3.4 1.9 3.4 1.4 0 1.9-1.8 2.2-4 .3-2.2.5-3.8 1.1-5.2.6-1.3 1.4-2.6 1.4-4.6C21 4.8 19.2 3 17 3c-1.6 0-2.6.8-5 .8S8.6 3 7 3z" /></svg></div>
+    </div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav is-hero">
+      <a class="nav__brand" href="#top" aria-label="Dental Pro — back to top">
+        <span class="nav__mono"><svg class="svg-mono" viewBox="450 -12 1307 1039" aria-hidden="true" focusable="false" fill="currentColor"><g transform="translate(0,1352) scale(0.1,-0.1)"><path pathLength="1" d="M9770 13506 c-19 -7 -42 -26 -52 -42 -15 -27 -17 -261 -19 -3289 -3 -3529 -7 -3297 48 -3311 52 -14 182 114 361 356 89 119 134 197 187 325 86 204 115 308 134 480 15 128 24 5367 10 5418 -19 70 -27 72 -349 74 -212 2 -294 -1 -320 -11z"/><path pathLength="1" d="M8359 11466 c-3 -3 -198 -10 -435 -16 -982 -26 -1116 -30 -1254 -39 -309 -22 -441 -47 -685 -131 -344 -119 -661 -340 -887 -620 -241 -299 -364 -646 -409 -1159 -15 -170 -15 -1803 0 -1971 29 -327 75 -559 151 -765 173 -465 496 -835 895 -1024 144 -69 138 -66 230 -97 158 -53 281 -74 560 -96 225 -18 1827 -18 2085 0 345 25 474 42 615 82 50 14 111 30 148 37 15 3 30 9 33 14 3 5 14 9 25 9 10 0 27 4 37 9 16 8 47 21 95 40 46 18 166 78 276 138 63 35 115 63 117 63 17 0 331 208 396 263 181 152 201 170 293 271 207 226 387 522 504 826 18 47 37 94 41 105 19 48 46 141 79 273 25 99 30 120 41 167 6 28 15 66 20 85 5 19 14 62 20 95 6 33 15 78 20 100 15 69 24 118 116 670 27 163 96 431 133 520 5 11 14 36 21 55 42 121 127 294 215 440 121 201 210 311 345 428 187 162 308 242 516 343 139 67 163 78 222 100 12 5 32 13 45 18 12 6 63 23 112 39 86 28 131 40 228 61 23 5 69 15 102 23 47 10 218 13 820 11 980 -3 1285 -16 1475 -65 257 -65 497 -221 643 -418 26 -36 55 -74 64 -84 62 -75 178 -377 201 -521 6 -38 16 -101 23 -140 18 -110 29 -1995 13 -2190 -19 -219 -40 -334 -86 -475 -22 -70 -87 -206 -118 -251 -11 -15 -20 -30 -20 -33 0 -3 -28 -42 -61 -86 -147 -192 -348 -339 -559 -409 -252 -84 -466 -107 -880 -98 -888 20 -1397 28 -1483 23 -104 -7 -149 -22 -168 -57 -20 -38 -27 -132 -20 -287 l6 -152 32 -31 31 -32 289 -9 c342 -11 1655 -3 1833 11 119 9 191 19 325 42 33 5 77 12 98 15 20 4 40 10 43 15 3 5 18 9 34 9 16 0 32 4 35 10 3 6 15 10 26 10 10 0 27 4 37 9 9 5 55 24 102 42 191 74 345 169 530 327 225 193 413 466 525 762 67 177 100 320 130 560 28 219 41 1675 19 2065 -25 461 -149 849 -376 1183 -130 190 -360 406 -560 525 -290 173 -552 259 -893 292 -279 28 -1120 42 -1530 26 -576 -22 -837 -58 -1169 -162 -125 -39 -176 -60 -301 -120 -284 -138 -599 -417 -822 -729 -65 -92 -153 -227 -153 -236 0 -3 -13 -24 -28 -47 -25 -38 -106 -198 -145 -287 -102 -232 -190 -531 -238 -800 -5 -30 -14 -80 -20 -110 -10 -53 -19 -109 -39 -250 -6 -36 -15 -92 -20 -125 -6 -33 -15 -89 -21 -125 -18 -114 -29 -174 -38 -220 -19 -92 -33 -166 -41 -210 -12 -66 -29 -150 -40 -195 -5 -22 -13 -58 -18 -80 -14 -60 -58 -188 -91 -258 -34 -74 -207 -361 -271 -448 -93 -128 -269 -290 -500 -460 -118 -87 -136 -98 -354 -231 -223 -135 -462 -198 -907 -238 -183 -16 -1681 -12 -1979 5 -233 14 -282 19 -410 43 -148 28 -352 113 -485 203 -230 154 -403 427 -480 754 -9 39 -18 79 -21 90 -39 139 -45 366 -34 1380 9 940 10 988 31 1095 41 216 103 387 203 565 53 95 85 136 186 235 184 181 416 305 655 349 240 44 235 44 1343 50 l1074 6 28 32 c44 49 52 96 48 292 -3 156 -5 180 -24 211 -35 61 -52 65 -319 68 -132 2 -243 1 -246 -2z"/><path pathLength="1" d="M12333 9659 c-173 -90 -244 -144 -319 -240 -87 -113 -149 -266 -185 -454 -34 -180 -34 -190 -34 -1555 0 -745 -4 -1922 -9 -2616 -5 -693 -5 -1279 -1 -1301 10 -62 42 -88 124 -102 88 -14 308 -14 426 0 118 14 149 36 165 115 9 43 10 385 4 1398 -10 1598 -10 1570 7 2856 17 1263 17 1831 0 1883 -11 32 -50 67 -75 67 -3 0 -50 -23 -103 -51z"/></g></svg></span>
+        <span class="nav__word">Dental Pro</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#story">Inside the smile</a>
+        <a href="#treatments">Treatments</a>
+        <a href="#results">Results</a>
+        <a href="#doctor">Dr. Alyssa</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn--sm nav__cta" href="#book"><span>Book now</span></a>
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </header>
+
+    <div class="menu" id="menu" aria-hidden="true">
+      <nav class="menu__links" aria-label="Mobile">
+        <a href="#story"><em>01</em>Inside the smile</a>
+        <a href="#treatments"><em>02</em>Treatments</a>
+        <a href="#results"><em>03</em>Results</a>
+        <a href="#doctor"><em>04</em>Dr. Alyssa</a>
+        <a href="#faq"><em>05</em>FAQ</a>
+        <a href="#book"><em>06</em>Book a visit</a>
+      </nav>
+      <p class="menu__foot">Talavera · Santo Domingo · Nueva Ecija</p>
+    </div>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="top" data-theme="light">
+        <div class="hero__content">
+          <p class="pill pill--glass" data-intro><span class="pill__dot"></span>Talavera · Santo Domingo</p>
+          <h1 class="hero__title" aria-label="Confidence, beautifully made.">
+            <span class="ln" aria-hidden="true"><span>Confidence,</span></span>
+            <span class="ln" aria-hidden="true"><span><em>beautifully</em></span></span>
+            <span class="ln" aria-hidden="true"><span>made.</span></span>
+          </h1>
+          <p class="hero__lead" data-intro>Cosmetic and family dentistry led by Dr.&nbsp;Alyssa Marie V.&nbsp;Mamaril — precise, gentle and designed around your smile.</p>
+          <div class="hero__actions" data-intro>
+            <a class="btn btn--white" href="#book"><span>Book your visit</span><i class="btn__arrow" aria-hidden="true">→</i></a>
+            <a class="btn btn--glass" href="#treatments"><span>See treatments</span></a>
+          </div>
+        </div>
+        <div class="hero__strip" data-intro>
+          <span>Teeth whitening</span><i></i><span>Braces</span><i></i><span>Deep cleaning</span><i></i><span>Restorations</span><i></i><span>Dentures &amp; bridges</span>
+        </div>
+      </section>
+
+      <!-- ============ WHY ============ -->
+      <section class="why" id="why" data-theme="light">
+        <div class="why__inner">
+          <p class="label" data-fade>Why Dental Pro</p>
+          <h2 class="why__statement" data-words>Modern dentistry with a <em>designer's eye</em> — so your smile looks natural, feels comfortable and lasts.</h2>
+          <div class="features">
+            <article class="feature" data-fade>
+              <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z" /></svg></span>
+              <h3>Gentle by design</h3>
+              <p>Calm, unhurried visits and clear explanations at every step.</p>
+            </article>
+            <article class="feature" data-fade>
+              <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="3.5" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3" /></svg></span>
+              <h3>Precise results</h3>
+              <p>Careful planning and meticulous technique, for results that last.</p>
+            </article>
+            <article class="feature" data-fade>
+              <span class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s6-5.3 6-11a6 6 0 0 0-12 0c0 5.7 6 11 6 11z" /><circle cx="12" cy="10" r="2.3" /></svg></span>
+              <h3>Two clinics</h3>
+              <p>Visit us in Talavera or Santo Domingo, Nueva Ecija.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ STORY ============ -->
+      <section class="story" id="story" data-theme="dark">
+        <div class="story__sticky">
+          <div class="story__copy">
+            <h2 class="sr-only">Inside the smile</h2>
+            <p class="label label--light">Inside the smile</p>
+            <div class="story__chapters">
+              <article class="chapter is-active">
+                <span class="chapter__n">01 — Anatomy</span>
+                <h3 class="chapter__title">Know what's <em>beneath.</em></h3>
+                <p>Enamel, dentin and pulp: three layers working as one. Every Dental Pro plan starts by understanding all of them.</p>
+              </article>
+              <article class="chapter">
+                <span class="chapter__n">02 — Whitening</span>
+                <h3 class="chapter__title">Brightness, <em>restored.</em></h3>
+                <p>Professional whitening lifts stains left by coffee, tea and time — safely, with your gums protected throughout.</p>
+              </article>
+              <article class="chapter">
+                <span class="chapter__n">03 — Restoration</span>
+                <h3 class="chapter__title">Repairs you'll <em>never notice.</em></h3>
+                <p>Chips, cracks and decay are rebuilt in tooth-coloured materials, shaped and shade-matched until they disappear.</p>
+              </article>
+            </div>
+            <div class="story__progress" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+          </div>
+          <p class="story__hint" aria-hidden="true">Scroll</p>
+        </div>
+      </section>
+
+      <!-- ============ TREATMENTS ============ -->
+      <section class="treatments" id="treatments" data-theme="light">
+        <header class="head">
+          <p class="label" data-fade>Treatments</p>
+          <h2 class="h2" data-reveal>Everything your smile <em>needs</em>, under one roof.</h2>
+          <p class="head__text" data-fade>Choose a treatment to see how it works and who it's for.</p>
+        </header>
+
+        <div class="showcase">
+          <div class="showcase__list" role="tablist" aria-label="Treatments">
+            <button class="tx is-active" role="tab" aria-selected="true" aria-controls="tx-panel" id="tx-0"><span class="tx__n">01</span><span class="tx__name">Teeth Whitening</span><span class="tx__go" aria-hidden="true">→</span></button>
+            <button class="tx" role="tab" aria-selected="false" aria-controls="tx-panel" id="tx-1" tabindex="-1"><span class="tx__n">02</span><span class="tx__name">Braces &amp; Orthodontics</span><span class="tx__go" aria-hidden="true">→</span></button>
+            <button class="tx" role="tab" aria-selected="false" aria-controls="tx-panel" id="tx-2" tabindex="-1"><span class="tx__n">03</span><span class="tx__name">Deep Cleaning</span><span class="tx__go" aria-hidden="true">→</span></button>
+            <button class="tx" role="tab" aria-selected="false" aria-controls="tx-panel" id="tx-3" tabindex="-1"><span class="tx__n">04</span><span class="tx__name">Aesthetic Restorations</span><span class="tx__go" aria-hidden="true">→</span></button>
+            <button class="tx" role="tab" aria-selected="false" aria-controls="tx-panel" id="tx-4" tabindex="-1"><span class="tx__n">05</span><span class="tx__name">Dentures &amp; Bridges</span><span class="tx__go" aria-hidden="true">→</span></button>
+            <div class="showcase__help">
+              <p>Not sure what you need?</p>
+              <a class="link" href="#book">Book a consultation</a>
+            </div>
+          </div>
+
+          <div class="showcase__panel" id="tx-panel" role="tabpanel" aria-labelledby="tx-0">
+            <div class="showcase__media">
+              <img decoding="async" class="is-active" src="./assets/img/tx-whitening.webp" alt="A bright, natural smile with white teeth" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" src="./assets/img/tx-braces.webp" alt="A smile with metal braces" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" src="./assets/img/tx-cleaning.webp" alt="A dental exam with a mouth mirror and scaler" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" src="./assets/img/tx-restorations.webp" alt="A dentist holding a cross-section model of a tooth" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" src="./assets/img/tx-dentures.webp" alt="A partial denture held in a dentist's hands" width="1200" height="1320" loading="lazy" />
+            </div>
+            <div class="showcase__card">
+              <p class="showcase__tag"></p>
+              <h3 class="showcase__title"></h3>
+              <p class="showcase__text"></p>
+              <ul class="tags showcase__good"></ul>
+              <button class="btn btn--teal" data-book><span>Book this treatment</span><i class="btn__arrow" aria-hidden="true">→</i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RESULTS ============ -->
+      <section class="results" id="results" data-theme="tint">
+        <header class="head head--row">
+          <div>
+            <p class="label" data-fade>Real results</p>
+            <h2 class="h2" data-reveal>Before &amp; after, <em>from our chair.</em></h2>
+          </div>
+          <div class="results__nav">
+            <p class="head__text">Tap <b>After</b> on any case. Every photo is a Dental Pro patient.</p>
+            <div class="arrows">
+              <button class="arrow" data-cases-prev aria-label="Previous case">←</button>
+              <button class="arrow" data-cases-next aria-label="Next case">→</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="cases" data-cases>
+          <article class="case" data-case>
+            <div class="case__media">
+              <img decoding="async" class="case__before" src="./assets/results/smile-before.webp" alt="Before: missing upper front teeth" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="./assets/results/smile-after.webp" alt="After: a complete, even smile" width="1600" height="1131" loading="lazy" />
+              <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
+            </div>
+            <div class="case__info"><span class="case__n">01</span><div><h3>Smile reconstruction</h3><p>Missing front teeth replaced for a full, balanced smile.</p></div></div>
+          </article>
+          <article class="case" data-case>
+            <div class="case__media">
+              <img decoding="async" class="case__before" src="./assets/results/harmony-before.webp" alt="Before: one discoloured tooth" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="./assets/results/harmony-after.webp" alt="After: an even, harmonised shade" width="1600" height="1131" loading="lazy" />
+              <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
+            </div>
+            <div class="case__info"><span class="case__n">02</span><div><h3>Shade harmony</h3><p>A discoloured tooth brought back in tune with its neighbours.</p></div></div>
+          </article>
+          <article class="case" data-case>
+            <div class="case__media">
+              <img decoding="async" class="case__before" src="./assets/results/restore-before.webp" alt="Before: dark decay between the front teeth" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="./assets/results/restore-after.webp" alt="After: front teeth invisibly restored" width="1600" height="1131" loading="lazy" />
+              <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
+            </div>
+            <div class="case__info"><span class="case__n">03</span><div><h3>Aesthetic restoration</h3><p>Decay between the front teeth removed and rebuilt seamlessly.</p></div></div>
+          </article>
+          <article class="case" data-case>
+            <div class="case__media">
+              <img decoding="async" class="case__before" src="./assets/results/cleaning-before.webp" alt="Before: heavy tartar build-up" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="./assets/results/cleaning-after.webp" alt="After: tartar removed" width="1600" height="1131" loading="lazy" />
+              <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
+            </div>
+            <div class="case__info"><span class="case__n">04</span><div><h3>Deep cleaning</h3><p>Heavy tartar cleared, photographed right after treatment.</p></div></div>
+          </article>
+          <article class="case" data-case>
+            <div class="case__media">
+              <img decoding="async" class="case__before" src="./assets/results/whitening-before.webp" alt="Before: yellowed teeth" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="./assets/results/whitening-after.webp" alt="After: visibly whiter teeth, captured in-chair" width="1600" height="1131" loading="lazy" />
+              <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
+            </div>
+            <div class="case__info"><span class="case__n">05</span><div><h3>Teeth whitening</h3><p>Captured in-chair, straight after the session.</p></div></div>
+          </article>
+          <article class="case">
+            <div class="case__media"><img decoding="async" src="./assets/results/ortho.webp" alt="Braces at different stages of orthodontic treatment" width="1600" height="1131" loading="lazy" /></div>
+            <div class="case__info"><span class="case__n">06</span><div><h3>Braces journeys</h3><p>From first bracket to final alignment.</p></div></div>
+          </article>
+        </div>
+        <p class="note">Individual results vary.</p>
+      </section>
+
+      <!-- ============ DOCTOR ============ -->
+      <section class="doctor" id="doctor" data-theme="light">
+        <div class="doctor__card">
+          <div class="doctor__visual">
+            <span class="doctor__halo" aria-hidden="true"></span>
+            <img decoding="async" class="doctor__img" src="./assets/img/dr-alyssa.webp" alt="Dr. Alyssa Marie V. Mamaril smiling in her white coat" width="1037" height="1600" loading="lazy" />
+          </div>
+          <div class="doctor__copy">
+            <p class="label label--light" data-fade>Meet your dentist</p>
+            <h2 class="h2" data-reveal>Dr. Alyssa Marie <em>V. Mamaril</em></h2>
+            <p class="doctor__role" data-fade>Cosmetic Dentist · Dental Pro</p>
+            <p class="doctor__text" data-fade>Dr. Alyssa brings a cosmetic dentist's eye and a genuinely gentle touch to every visit. She takes time to listen, explains each option in plain language and plans treatment around what matters most to you.</p>
+            <ul class="tags tags--light" data-fade><li>Cosmetic dentistry</li><li>Family care</li><li>Talavera &amp; Santo Domingo</li></ul>
+            <a class="btn btn--white" href="#book" data-fade><span>Book with Dr. Alyssa</span><i class="btn__arrow" aria-hidden="true">→</i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROCESS ============ -->
+      <section class="process" id="process" data-theme="tint">
+        <header class="head head--center">
+          <p class="label" data-fade>Your visit</p>
+          <h2 class="h2" data-reveal>Four simple steps to a <em>smile you love.</em></h2>
+        </header>
+        <ol class="steps">
+          <li class="step" data-fade><span class="step__n">01</span><h3>Book</h3><p>Send a request online and we'll confirm a time that suits you.</p></li>
+          <li class="step" data-fade><span class="step__n">02</span><h3>Consult</h3><p>A thorough check-up and an honest, unhurried conversation.</p></li>
+          <li class="step" data-fade><span class="step__n">03</span><h3>Plan</h3><p>Clear options, explained simply. You decide what's right.</p></li>
+          <li class="step" data-fade><span class="step__n">04</span><h3>Smile</h3><p>Careful treatment, plus aftercare that keeps results lasting.</p></li>
+        </ol>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section class="faq" id="faq" data-theme="light">
+        <header class="head faq__head">
+          <p class="label" data-fade>FAQ</p>
+          <h2 class="h2" data-reveal>Questions, <em>answered.</em></h2>
+          <p class="head__text" data-fade>Anything else? Ask us when you book.</p>
+        </header>
+        <div class="faq__list">
+          <div class="qa"><h3><button class="qa__q" aria-expanded="false" aria-controls="qa-1" id="qa-1-q">Is teeth whitening safe?<span class="qa__icon" aria-hidden="true"></span></button></h3><div class="qa__a" id="qa-1" role="region" aria-labelledby="qa-1-q"><div><p>Yes, when it's done professionally. We check your teeth first, protect your gums and control the strength of the gel throughout.</p></div></div></div>
+          <div class="qa"><h3><button class="qa__q" aria-expanded="false" aria-controls="qa-2" id="qa-2-q">How often should I get a cleaning?<span class="qa__icon" aria-hidden="true"></span></button></h3><div class="qa__a" id="qa-2" role="region" aria-labelledby="qa-2-q"><div><p>Every six months suits most people. If your gums need extra attention, we'll suggest a schedule that fits you.</p></div></div></div>
+          <div class="qa"><h3><button class="qa__q" aria-expanded="false" aria-controls="qa-3" id="qa-3-q">Do braces hurt?<span class="qa__icon" aria-hidden="true"></span></button></h3><div class="qa__a" id="qa-3" role="region" aria-labelledby="qa-3-q"><div><p>Expect some pressure for a few days after fitting or adjustments. It passes quickly, and we'll show you simple ways to stay comfortable.</p></div></div></div>
+          <div class="qa"><h3><button class="qa__q" aria-expanded="false" aria-controls="qa-4" id="qa-4-q">Will a filling or repair be noticeable?<span class="qa__icon" aria-hidden="true"></span></button></h3><div class="qa__a" id="qa-4" role="region" aria-labelledby="qa-4-q"><div><p>Tooth-coloured restorations are shade-matched and polished to blend in with your natural teeth, so they're virtually invisible.</p></div></div></div>
+          <div class="qa"><h3><button class="qa__q" aria-expanded="false" aria-controls="qa-5" id="qa-5-q">Which clinic should I choose?<span class="qa__icon" aria-hidden="true"></span></button></h3><div class="qa__a" id="qa-5" role="region" aria-labelledby="qa-5-q"><div><p>Whichever is easier for you: Talavera or Santo Domingo. Just pick one when you book.</p></div></div></div>
+          <div class="qa"><h3><button class="qa__q" aria-expanded="false" aria-controls="qa-6" id="qa-6-q">How do I book?<span class="qa__icon" aria-hidden="true"></span></button></h3><div class="qa__a" id="qa-6" role="region" aria-labelledby="qa-6-q"><div><p>Fill in the booking form on this page and tap Send via Messenger. Your details go straight to our Facebook inbox, and we'll reply to confirm your appointment.</p></div></div></div>
+        </div>
+      </section>
+
+      <!-- ============ BOOK ============ -->
+      <section class="book" id="book" data-theme="light">
+        <div class="book__frame">
+          <video class="book__video" muted loop playsinline preload="none" poster="./assets/video/silk-pearl-poster.webp" data-src="/assets/video/silk-pearl.mp4"></video>
+          <div class="book__inner">
+            <div class="book__intro">
+              <p class="label" data-fade>Book a visit</p>
+              <h2 class="h2" data-reveal>Let's start with <em>a conversation.</em></h2>
+              <p class="head__text" data-fade>Tell us what you'd like to achieve and which clinic suits you. We'll get back to you to confirm a time.</p>
+              <div class="clinics">
+                <article class="clinic" data-fade>
+                  <h3>Talavera</h3>
+                  <p>Diaz St, Talavera, 3114 Nueva Ecija</p>
+                  <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Dental+PRO+Dental+Clinic+Diaz+St+Talavera+Nueva+Ecija" target="_blank" rel="noopener">Get directions</a>
+                </article>
+                <article class="clinic" data-fade>
+                  <h3>Santo Domingo</h3>
+                  <p>Pedro Pascual St, Santo Domingo, Nueva Ecija</p>
+                  <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Dental+PRO+Dental+Clinic+Pedro+Pascual+St+Santo+Domingo+Nueva+Ecija" target="_blank" rel="noopener">Get directions</a>
+                </article>
+              </div>
+            </div>
+
+            <form class="form" novalidate>
+              <h3 class="form__title">Request an appointment</h3>
+              <p class="form__note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.3c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.6 0 10-4.1 10-9.2S17.6 2 12 2zm1 12.4-2.6-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.9-2.7-5.4 5.7z" /></svg>Your request is sent through our Facebook Messenger.</p>
+              <div class="form__row">
+                <label class="field"><span>Full name</span><input type="text" name="name" autocomplete="name" required /></label>
+                <label class="field"><span>Mobile number</span><input type="tel" name="phone" autocomplete="tel" required /></label>
+              </div>
+              <label class="field"><span>Email <small>(optional)</small></span><input type="email" name="email" autocomplete="email" /></label>
+              <fieldset class="choices">
+                <legend>Treatment</legend>
+                <label><input type="radio" name="treatment" value="Check-up" checked /><span>Check-up</span></label>
+                <label><input type="radio" name="treatment" value="Whitening" /><span>Whitening</span></label>
+                <label><input type="radio" name="treatment" value="Braces" /><span>Braces</span></label>
+                <label><input type="radio" name="treatment" value="Deep cleaning" /><span>Deep cleaning</span></label>
+                <label><input type="radio" name="treatment" value="Restorations" /><span>Restorations</span></label>
+                <label><input type="radio" name="treatment" value="Dentures & bridges" /><span>Dentures &amp; bridges</span></label>
+              </fieldset>
+              <div class="form__row">
+                <label class="field"><span>Clinic</span><select name="clinic"><option>Talavera</option><option>Santo Domingo</option></select></label>
+                <label class="field"><span>Preferred date</span><input type="date" name="date" /></label>
+              </div>
+              <label class="field"><span>Anything we should know?</span><textarea name="message" rows="3"></textarea></label>
+              <div class="form__submit">
+                <button class="btn btn--teal" type="submit"><span class="btn__label">Send via Messenger</span><i class="btn__arrow" aria-hidden="true">→</i></button>
+                <p class="form__status" role="status" aria-live="polite"></p>
+              </div>
+              <div class="form__done" role="status" aria-live="polite" hidden>
+                <p class="form__done-title">Almost done: finish in Messenger</p>
+                <p>We've copied your details. In the Messenger chat that just opened, tap the message box, paste and press send.</p>
+                <pre class="form__preview"></pre>
+                <div class="form__done-actions">
+                  <a class="btn btn--teal btn--sm" href="#" target="_blank" rel="noopener" data-messenger><span>Open Messenger</span></a>
+                  <button type="button" class="link" data-copy>Copy details again</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="footer" data-theme="dark">
+        <div class="footer__top">
+          <p class="footer__line">Your best smile is <em>one visit away.</em></p>
+          <a class="btn btn--white" href="#book"><span>Book now</span><i class="btn__arrow" aria-hidden="true">→</i></a>
+        </div>
+        <div class="footer__stage">
+          <nav class="footer__col" aria-label="Footer">
+            <h3>Explore</h3>
+            <a href="#story">Inside the smile</a>
+            <a href="#treatments">Treatments</a>
+            <a href="#results">Results</a>
+            <a href="#doctor">Dr. Alyssa</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+          <div class="footer__col footer__col--right">
+            <h3>Clinics</h3>
+            <p><strong>Talavera</strong>Diaz St, Talavera, Nueva Ecija</p>
+            <p><strong>Santo Domingo</strong>Pedro Pascual St, Santo Domingo, Nueva Ecija</p>
+          </div>
+        </div>
+        <div class="footer__mark" aria-label="Dental Pro"><svg class="svg-wordmark" viewBox="-8 1155 2255 206" aria-hidden="true" focusable="false" fill="currentColor"><g transform="translate(0,1352) scale(0.1,-0.1)"><path pathLength="1" d="M21215 1861 c-332 -88 -554 -292 -660 -606 -28 -82 -37 -145 -42 -294 -4 -131 -2 -152 22 -250 73 -287 253 -509 508 -625 148 -67 389 -96 567 -67 385 63 670 336 760 729 17 75 15 304 -4 395 -26 127 -81 260 -149 362 -31 46 -146 162 -204 206 -65 49 -175 102 -278 136 -72 23 -99 26 -265 29 -156 3 -196 1 -255 -15z m377 -176 c231 -48 395 -171 482 -358 67 -142 80 -207 80 -377 -1 -144 -12 -214 -49 -295 -8 -17 -19 -43 -25 -59 -30 -80 -139 -211 -227 -273 -40 -29 -134 -76 -193 -98 -70 -27 -301 -32 -393 -10 -252 61 -446 263 -513 535 -25 100 -25 286 0 390 23 92 80 216 136 292 82 110 250 218 385 247 33 7 65 15 70 16 30 10 184 3 247 -10z"/><path pathLength="1" d="M17 1850 c-16 -10 -17 -64 -17 -903 0 -681 3 -896 12 -905 19 -19 710 -17 836 4 99 15 246 67 314 110 21 13 42 24 47 24 18 0 168 156 210 219 112 165 169 371 158 571 -15 272 -79 437 -232 608 -88 97 -221 185 -345 226 -146 47 -158 49 -570 53 -273 2 -400 0 -413 -7z m814 -196 c237 -52 413 -214 496 -459 26 -75 28 -91 28 -250 0 -180 -9 -226 -67 -354 -51 -112 -177 -239 -292 -296 -125 -61 -161 -66 -482 -72 l-291 -5 -6 718 c-3 395 -4 721 -1 726 3 4 126 8 273 8 211 0 284 -4 342 -16z"/><path pathLength="1" d="M2656 1844 c-3 -8 -6 -415 -6 -903 0 -677 3 -890 12 -899 9 -9 154 -12 589 -12 517 0 577 2 583 16 3 9 6 42 6 74 0 96 15 90 -214 90 -110 0 -326 3 -479 7 l-277 6 2 326 3 326 414 3 c317 2 417 5 423 15 13 21 10 157 -4 162 -7 3 -197 6 -423 7 l-410 3 -3 303 -2 302 463 0 c359 0 467 3 481 13 14 10 16 26 14 92 l-3 80 -581 3 c-524 2 -582 1 -588 -14z"/><path pathLength="1" d="M6325 1851 l-50 -6 -5 -705 c-3 -451 -9 -705 -15 -705 -10 0 -31 27 -288 363 -72 96 -188 247 -255 335 -68 89 -163 214 -211 277 -117 155 -265 345 -308 398 l-35 42 -88 0 -88 0 -6 -87 c-9 -142 -17 -1655 -8 -1693 l8 -35 94 0 95 0 3 708 c2 588 4 707 16 707 20 0 321 -384 800 -1020 159 -212 294 -388 300 -393 6 -4 49 -6 96 -5 l85 3 3 906 2 907 -22 6 c-25 6 -48 6 -123 -3z"/><path pathLength="1" d="M7507 1853 c-12 -12 -8 -158 5 -171 9 -9 86 -12 283 -12 197 0 274 -3 283 -12 9 -9 12 -201 12 -801 0 -524 3 -795 10 -808 9 -16 22 -19 93 -19 51 0 88 5 95 12 9 9 12 197 12 784 0 665 2 777 15 808 l15 36 293 2 292 3 9 53 c5 32 5 69 0 90 l-9 37 -701 3 c-385 1 -704 -1 -707 -5z"/><path pathLength="1" d="M15835 1848 c-3 -7 -4 -418 -3 -913 l3 -900 91 -3 c68 -2 94 1 102 11 8 10 13 120 14 363 l3 349 295 6 c300 6 353 12 450 48 286 108 413 459 274 761 -57 124 -153 206 -301 257 l-78 27 -423 4 c-344 3 -423 1 -427 -10z m804 -193 c82 -21 121 -43 176 -99 69 -70 88 -130 83 -257 -3 -75 -8 -105 -29 -150 -49 -103 -140 -169 -266 -189 -32 -6 -165 -10 -295 -10 -202 0 -239 2 -252 16 -14 13 -16 59 -16 353 0 186 3 341 7 344 3 4 126 7 272 7 198 0 280 -4 320 -15z"/><path pathLength="1" d="M18196 1852 c-9 -15 -11 -1772 -2 -1800 7 -22 11 -23 99 -20 l92 3 5 355 c3 195 9 361 13 368 6 9 57 12 197 12 l189 0 73 -105 c40 -58 109 -157 153 -220 44 -63 121 -174 170 -246 50 -73 99 -141 110 -151 17 -16 33 -18 125 -16 86 2 105 6 108 19 3 15 -19 49 -136 215 -337 477 -367 524 -331 524 32 0 154 60 217 107 118 88 171 188 191 358 26 229 -55 420 -220 520 -127 78 -123 77 -610 82 -287 3 -439 1 -443 -5z m809 -193 c147 -40 231 -128 256 -271 30 -166 -47 -324 -191 -392 l-65 -31 -299 -3 c-241 -3 -300 -1 -307 10 -10 15 -12 682 -2 691 11 12 565 8 608 -4z"/><path pathLength="1" d="M10337 1773 c-19 -43 -81 -188 -137 -323 -57 -135 -113 -268 -126 -296 -41 -90 -134 -305 -203 -469 -38 -88 -78 -182 -90 -210 -22 -49 -31 -72 -50 -117 -5 -13 -25 -59 -44 -103 -102 -234 -104 -220 23 -220 l95 0 27 55 c34 69 78 169 78 176 0 3 6 20 14 37 8 18 28 63 45 100 17 38 31 75 31 83 0 7 12 17 28 21 35 10 799 10 835 0 31 -9 45 -35 131 -248 30 -75 64 -157 76 -183 l22 -46 93 0 c65 0 96 4 104 13 11 14 -8 68 -91 262 -20 44 -95 222 -167 395 -208 494 -242 573 -296 695 -15 33 -38 88 -51 122 -13 34 -49 123 -80 198 l-57 135 -87 0 -87 0 -36 -77z m193 -400 c35 -82 86 -206 115 -278 29 -71 76 -186 104 -254 28 -69 50 -129 48 -134 -1 -5 -25 -11 -52 -12 -28 -2 -100 -6 -160 -10 -116 -8 -454 2 -473 14 -8 5 11 62 59 176 78 189 114 275 135 321 7 17 33 78 57 135 73 173 81 189 93 189 7 0 40 -66 74 -147z"/><path pathLength="1" d="M12345 1828 c-3 -13 -4 -421 -3 -908 l3 -885 555 0 555 0 3 80 c1 44 -2 87 -8 95 -8 13 -70 15 -445 16 -240 1 -439 5 -442 8 -4 3 -8 364 -9 801 -2 438 -6 800 -9 805 -3 6 -49 10 -100 10 -90 0 -95 -1 -100 -22z"/></g></svg></div>
+        <div class="footer__bottom">
+          <span>© <span data-year>2026</span> Dental PRO Dental Clinic</span>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </footer>
+    </main>
+
+  </body>
+</html>
