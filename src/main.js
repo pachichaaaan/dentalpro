@@ -55,6 +55,7 @@ const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const mqMobile = window.matchMedia('(max-width: 900px)');
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 document.documentElement.classList.add('js');
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
@@ -657,6 +658,44 @@ $$('a[href^="#"]').forEach((a) => {
     scrollToEl(target);
   });
 });
+
+/* ==========================================================================
+   Tooth cursor (mouse and trackpad only)
+   ========================================================================== */
+if (finePointer && !reduced) {
+  document.documentElement.classList.add('has-cursor');
+  const cursor = $('.cursor');
+  const ring = $('.cursor__ring');
+  const tooth = $('.cursor__tooth');
+  const toothSvg = $('svg', tooth);
+  const rx = gsap.quickTo(ring, 'x', { duration: 0.5, ease: 'power3' });
+  const ry = gsap.quickTo(ring, 'y', { duration: 0.5, ease: 'power3' });
+  const tx = gsap.quickTo(tooth, 'x', { duration: 0.08, ease: 'none' });
+  const ty = gsap.quickTo(tooth, 'y', { duration: 0.08, ease: 'none' });
+  // the tooth leans into the direction of travel, then settles upright
+  let lastX = 0;
+  let push = 0;
+  let lean = 0;
+  window.addEventListener('pointermove', (e) => {
+    rx(e.clientX); ry(e.clientY); tx(e.clientX); ty(e.clientY);
+    push += e.clientX - lastX;
+    lastX = e.clientX;
+  }, { passive: true });
+  gsap.ticker.add(() => {
+    lean += (gsap.utils.clamp(-28, 28, push * 1.6) - lean) * 0.18;
+    push *= 0.6;
+    gsap.set(toothSvg, { rotation: lean });
+  });
+  document.addEventListener('pointerover', (e) => {
+    const field = e.target.closest('input:not([type="radio"]), textarea, select');
+    cursor.classList.toggle('is-hidden', !!field);
+    cursor.classList.toggle('is-hover', !field && !!e.target.closest('a, button, label, [role="tab"]'));
+  });
+  window.addEventListener('pointerdown', () => cursor.classList.add('is-down'));
+  window.addEventListener('pointerup', () => cursor.classList.remove('is-down'));
+  document.documentElement.addEventListener('pointerleave', () => cursor.classList.add('is-hidden'));
+  document.documentElement.addEventListener('pointerenter', () => cursor.classList.remove('is-hidden'));
+}
 
 /* ==========================================================================
    Booking form
