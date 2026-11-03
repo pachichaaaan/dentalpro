@@ -16,9 +16,7 @@
     <meta property="og:image" content="https://pachichaaaan.github.io/dentalpro/assets/img/og.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300..500&family=Manrope:wght@300..800&display=swap" rel="stylesheet" />
+    <link rel="preload" href="/assets/model/tooth.glb" as="fetch" type="model/gltf-binary" crossorigin />
 
     <script type="application/ld+json">
       {
@@ -212,11 +210,11 @@
 
           <div class="showcase__panel" id="tx-panel" role="tabpanel" aria-labelledby="tx-0">
             <div class="showcase__media">
-              <img class="is-active" src="/assets/img/tx-whitening.webp" alt="A bright, natural smile with white teeth" width="1200" height="1320" loading="lazy" />
-              <img src="/assets/img/tx-braces.webp" alt="A smile with metal braces" width="1200" height="1320" loading="lazy" />
-              <img src="/assets/img/tx-cleaning.webp" alt="A dental exam with a mouth mirror and scaler" width="1200" height="1320" loading="lazy" />
-              <img src="/assets/img/tx-restorations.webp" alt="A dentist holding a cross-section model of a tooth" width="1200" height="1320" loading="lazy" />
-              <img src="/assets/img/tx-dentures.webp" alt="A partial denture held in a dentist's hands" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" class="is-active" src="/assets/img/tx-whitening.webp" alt="A bright, natural smile with white teeth" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" src="/assets/img/tx-braces.webp" alt="A smile with metal braces" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" src="/assets/img/tx-cleaning.webp" alt="A dental exam with a mouth mirror and scaler" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" src="/assets/img/tx-restorations.webp" alt="A dentist holding a cross-section model of a tooth" width="1200" height="1320" loading="lazy" />
+              <img decoding="async" src="/assets/img/tx-dentures.webp" alt="A partial denture held in a dentist's hands" width="1200" height="1320" loading="lazy" />
             </div>
             <div class="showcase__card">
               <p class="showcase__tag"></p>
@@ -248,46 +246,46 @@
         <div class="cases" data-cases>
           <article class="case" data-case>
             <div class="case__media">
-              <img class="case__before" src="/assets/results/smile-before.webp" alt="Before: missing upper front teeth" width="1600" height="1131" loading="lazy" />
-              <img class="case__after" src="/assets/results/smile-after.webp" alt="After: a complete, even smile" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__before" src="/assets/results/smile-before.webp" alt="Before: missing upper front teeth" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="/assets/results/smile-after.webp" alt="After: a complete, even smile" width="1600" height="1131" loading="lazy" />
               <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
             </div>
             <div class="case__info"><span class="case__n">01</span><div><h3>Smile reconstruction</h3><p>Missing front teeth replaced for a full, balanced smile.</p></div></div>
           </article>
           <article class="case" data-case>
             <div class="case__media">
-              <img class="case__before" src="/assets/results/harmony-before.webp" alt="Before: one discoloured tooth" width="1600" height="1131" loading="lazy" />
-              <img class="case__after" src="/assets/results/harmony-after.webp" alt="After: an even, harmonised shade" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__before" src="/assets/results/harmony-before.webp" alt="Before: one discoloured tooth" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="/assets/results/harmony-after.webp" alt="After: an even, harmonised shade" width="1600" height="1131" loading="lazy" />
               <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
             </div>
             <div class="case__info"><span class="case__n">02</span><div><h3>Shade harmony</h3><p>A discoloured tooth brought back in tune with its neighbours.</p></div></div>
           </article>
           <article class="case" data-case>
             <div class="case__media">
-              <img class="case__before" src="/assets/results/restore-before.webp" alt="Before: dark decay between the front teeth" width="1600" height="1131" loading="lazy" />
-              <img class="case__after" src="/assets/results/restore-after.webp" alt="After: front teeth invisibly restored" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__before" src="/assets/results/restore-before.webp" alt="Before: dark decay between the front teeth" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="/assets/results/restore-after.webp" alt="After: front teeth invisibly restored" width="1600" height="1131" loading="lazy" />
               <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
             </div>
             <div class="case__info"><span class="case__n">03</span><div><h3>Aesthetic restoration</h3><p>Decay between the front teeth removed and rebuilt seamlessly.</p></div></div>
           </article>
           <article class="case" data-case>
             <div class="case__media">
-              <img class="case__before" src="/assets/results/cleaning-before.webp" alt="Before: heavy tartar build-up" width="1600" height="1131" loading="lazy" />
-              <img class="case__after" src="/assets/results/cleaning-after.webp" alt="After: tartar removed" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__before" src="/assets/results/cleaning-before.webp" alt="Before: heavy tartar build-up" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="/assets/results/cleaning-after.webp" alt="After: tartar removed" width="1600" height="1131" loading="lazy" />
               <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
             </div>
             <div class="case__info"><span class="case__n">04</span><div><h3>Deep cleaning</h3><p>Heavy tartar cleared, photographed right after treatment.</p></div></div>
           </article>
           <article class="case" data-case>
             <div class="case__media">
-              <img class="case__before" src="/assets/results/whitening-before.webp" alt="Before: yellowed teeth" width="1600" height="1131" loading="lazy" />
-              <img class="case__after" src="/assets/results/whitening-after.webp" alt="After: visibly whiter teeth, captured in-chair" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__before" src="/assets/results/whitening-before.webp" alt="Before: yellowed teeth" width="1600" height="1131" loading="lazy" />
+              <img decoding="async" class="case__after" src="/assets/results/whitening-after.webp" alt="After: visibly whiter teeth, captured in-chair" width="1600" height="1131" loading="lazy" />
               <div class="switch" role="group" aria-label="Compare"><span class="switch__thumb"></span><button aria-pressed="true" data-show="before">Before</button><button aria-pressed="false" data-show="after">After</button></div>
             </div>
             <div class="case__info"><span class="case__n">05</span><div><h3>Teeth whitening</h3><p>Captured in-chair, straight after the session.</p></div></div>
           </article>
           <article class="case">
-            <div class="case__media"><img src="/assets/results/ortho.webp" alt="Braces at different stages of orthodontic treatment" width="1600" height="1131" loading="lazy" /></div>
+            <div class="case__media"><img decoding="async" src="/assets/results/ortho.webp" alt="Braces at different stages of orthodontic treatment" width="1600" height="1131" loading="lazy" /></div>
             <div class="case__info"><span class="case__n">06</span><div><h3>Braces journeys</h3><p>From first bracket to final alignment.</p></div></div>
           </article>
         </div>
@@ -299,7 +297,7 @@
         <div class="doctor__card">
           <div class="doctor__visual">
             <span class="doctor__halo" aria-hidden="true"></span>
-            <img class="doctor__img" src="/assets/img/dr-alyssa.webp" alt="Dr. Alyssa Marie V. Mamaril smiling in her white coat" width="1037" height="1600" loading="lazy" />
+            <img decoding="async" class="doctor__img" src="/assets/img/dr-alyssa.webp" alt="Dr. Alyssa Marie V. Mamaril smiling in her white coat" width="1037" height="1600" loading="lazy" />
           </div>
           <div class="doctor__copy">
             <p class="label label--light" data-fade>Meet your dentist</p>

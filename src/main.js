@@ -1,8 +1,9 @@
+import '@fontsource-variable/manrope/wght.css';
+import '@fontsource/fraunces/latin-300-italic.css';
 import './style.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
-import { ToothScene } from './scene.js';
 
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({ ignoreMobileResize: true });
@@ -84,22 +85,30 @@ const scrollToEl = (target) => {
    ========================================================================== */
 const canvas = $('.webgl');
 let scene = null;
-const webglOK = () => {
+let introStarted = false;
+const hasWebGL = (() => {
   try {
     const c = document.createElement('canvas');
     return !!(c.getContext('webgl2') || c.getContext('webgl'));
   } catch {
     return false;
   }
-};
-if (webglOK()) {
-  try {
-    scene = new ToothScene(canvas, { isMobile: mqMobile.matches, reduced });
-  } catch (err) {
-    console.warn('[Dental Pro] WebGL unavailable', err);
-  }
-}
-if (!scene) canvas.remove();
+})();
+// The 3D engine downloads alongside the rest of the page instead of blocking it.
+const sceneReady = hasWebGL
+  ? import('./scene.js')
+      .then(({ ToothScene }) => {
+        scene = new ToothScene(canvas, { isMobile: mqMobile.matches, reduced });
+        attachScene();
+        return scene;
+      })
+      .catch((err) => {
+        console.warn('[Dental Pro] WebGL unavailable', err);
+        canvas.remove();
+        return null;
+      })
+  : Promise.resolve(null);
+if (!hasWebGL) canvas.remove();
 
 /* ==========================================================================
    Text splitting
@@ -146,8 +155,8 @@ const heroVideo = $('.stage__video');
 
 gsap
   .timeline()
-  .to('.loader__mono path', { strokeDashoffset: 0, duration: 1.4, ease: 'power2.inOut', stagger: 0.14 })
-  .to('.loader__mono path', { fillOpacity: 1, strokeOpacity: 0, duration: 0.8, ease: 'power2.out' }, 1.2);
+  .to('.loader__mono path', { strokeDashoffset: 0, duration: 1, ease: 'power2.inOut', stagger: 0.1 })
+  .to('.loader__mono path', { fillOpacity: 1, strokeOpacity: 0, duration: 0.6, ease: 'power2.out' }, 0.85);
 
 const paintCount = () => {
   countEl.textContent = Math.round(loaderState.shown * 100);
@@ -163,7 +172,7 @@ let modelP = 0;
 let fontsP = 0;
 let videoP = 0;
 const setTarget = () => {
-  loaderState.target = scene ? modelP * 0.6 + fontsP * 0.2 + videoP * 0.2 : fontsP * 0.6 + videoP * 0.4;
+  loaderState.target = hasWebGL ? modelP * 0.6 + fontsP * 0.2 + videoP * 0.2 : fontsP * 0.6 + videoP * 0.4;
 };
 const tasks = [
   document.fonts.ready.then(() => { fontsP = 1; setTarget(); }),
@@ -173,10 +182,10 @@ const tasks = [
     heroVideo.addEventListener('error', resolve, { once: true });
   }).then(() => { videoP = 1; setTarget(); }),
 ];
-if (scene) {
+if (hasWebGL) {
   tasks.push(
-    scene
-      .load((p) => { modelP = p; setTarget(); })
+    sceneReady
+      .then((s) => s && s.load((p) => { modelP = p; setTarget(); }))
       .then(() => { modelP = 1; setTarget(); })
       .catch((err) => {
         console.warn('[Dental Pro] Model failed to load', err);
@@ -185,7 +194,7 @@ if (scene) {
       })
   );
 }
-const minTime = new Promise((r) => setTimeout(r, reduced ? 300 : 1900));
+const minTime = new Promise((r) => setTimeout(r, reduced ? 300 : 1100));
 // never hold visitors on the loader for long — a slow model simply fades in when ready
 const loadedOrTimeout = Promise.race([Promise.allSettled(tasks), new Promise((r) => setTimeout(r, 8000))]);
 
@@ -210,14 +219,23 @@ function exitLoader() {
 }
 
 function introHero() {
+  introStarted = true;
   const tl = gsap.timeline();
   tl.to('.hero__title .ln > span', { yPercent: 0, y: 0, duration: 1.4, ease: 'expo.out', stagger: 0.09 })
     .to('[data-intro]', { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out', stagger: 0.08 }, 0.3)
     .from('.nav', { y: -24, opacity: 0, duration: 1, ease: 'power3.out', clearProps: 'transform,opacity' }, 0.2);
-  if (scene) {
-    tl.to(scene.intro, { p: 1, duration: 2.6, ease: 'expo.out' }, 0);
-    hotspotGates.forEach((g, i) => tl.to(g, { v: 1, duration: 1, ease: 'power2.out' }, 1.5 + i * 0.18));
-  }
+  if (scene) tl.to(scene.intro, { p: 1, duration: 2.6, ease: 'expo.out' }, 0);
+  hotspotGates.forEach((g, i) => tl.to(g, { v: 1, duration: 1, ease: 'power2.out' }, 1.5 + i * 0.18));
+}
+
+// runs once the 3D engine has loaded (normally during the loading screen)
+function attachScene() {
+  window.addEventListener('pointermove', (e) => {
+    scene?.setPointer((e.clientX / window.innerWidth) * 2 - 1, -((e.clientY / window.innerHeight) * 2 - 1));
+  }, { passive: true });
+  window.addEventListener('resize', () => scene?.resize());
+  computeKeys();
+  if (introStarted) gsap.to(scene.intro, { p: 1, duration: 2.6, ease: 'expo.out' });
 }
 
 /* ==========================================================================
@@ -384,12 +402,6 @@ gsap.ticker.add(() => {
   scene.update();
   updateLabels();
 });
-if (scene) {
-  window.addEventListener('pointermove', (e) => {
-    scene.setPointer((e.clientX / window.innerWidth) * 2 - 1, -((e.clientY / window.innerHeight) * 2 - 1));
-  }, { passive: true });
-  window.addEventListener('resize', () => scene.resize());
-}
 
 /* ==========================================================================
    Hero stage → page

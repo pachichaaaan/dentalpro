@@ -27,7 +27,7 @@
   --accent: var(--teal-700);
   --accent-italic: var(--teal-700);
 
-  --f-sans: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  --f-sans: 'Manrope Variable', 'Manrope', 'Helvetica Neue', Arial, sans-serif;
   --f-serif: 'Fraunces', Georgia, serif;
 
   --gutter: clamp(1.25rem, 4vw, 4rem);
@@ -94,9 +94,8 @@ p { text-wrap: pretty; }
 em {
   font-family: var(--f-serif);
   font-style: italic;
-  font-weight: 350;
+  font-weight: 300;
   letter-spacing: -0.01em;
-  font-optical-sizing: auto;
   color: var(--accent-italic);
 }
 .label {
@@ -110,7 +109,7 @@ em {
   font-weight: 650; font-size: clamp(2.3rem, 4.6vw, 4.6rem);
   line-height: 1.02; letter-spacing: -0.04em;
 }
-.h2 em { font-weight: 330; letter-spacing: -0.02em; }
+.h2 em { letter-spacing: -0.02em; }
 
 .w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.06em 0.08em 0.14em 0.02em; margin: -0.06em -0.08em -0.14em -0.02em; }
 .wi { display: inline-block; will-change: transform; }
@@ -190,9 +189,9 @@ em {
 .glow { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0; }
 .glow i { transition: opacity 0.9s var(--ease); }
 body.theme-dark .glow i { opacity: 0; }
-.glow i { position: absolute; border-radius: 50%; filter: blur(90px); }
-.glow i:first-child { width: 46vw; height: 46vw; right: -12vw; top: 10vh; background: rgba(255, 255, 255, 0.45); }
-.glow i:last-child { width: 34vw; height: 34vw; left: -10vw; bottom: -6vh; background: rgba(236, 213, 160, 0.2); }
+.glow i { position: absolute; border-radius: 50%; }
+.glow i:first-child { width: 60vw; height: 60vw; right: -19vw; top: 3vh; background: radial-gradient(closest-side, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0)); }
+.glow i:last-child { width: 46vw; height: 46vw; left: -16vw; bottom: -12vh; background: radial-gradient(closest-side, rgba(236, 213, 160, 0.2), rgba(236, 213, 160, 0)); }
 .webgl { position: fixed; inset: 0; z-index: 1; width: 100vw; height: 100vh; pointer-events: none; }
 
 /* tooth cursor */
@@ -318,7 +317,6 @@ section { position: relative; }
 .why__inner { margin-left: 36%; display: grid; gap: 2rem; }
 .why__statement { font-size: clamp(1.9rem, 3.4vw, 3.4rem); font-weight: 550; line-height: 1.12; letter-spacing: -0.035em; }
 .why__statement .mw { opacity: 0.16; }
-.why__statement em { font-weight: 330; }
 .features { margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .feature { padding: 1.8rem; border-radius: var(--r-lg); background: rgba(255, 255, 255, 0.5); border: 1px solid rgba(255, 255, 255, 0.75); display: grid; gap: 0.6rem; align-content: start; transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease), background 0.6s; }
 .feature:hover { transform: translateY(-4px); box-shadow: var(--shadow); background: #fff; }

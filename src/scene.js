@@ -533,7 +533,7 @@ export class ToothScene {
     const h = window.innerHeight;
     this.width = w;
     this.height = h;
-    const pr = Math.min(window.devicePixelRatio || 1, this.isMobile ? 1.6 : 2);
+    const pr = Math.min(window.devicePixelRatio || 1, this.isMobile ? 1.6 : 1.75);
     this.renderer.setPixelRatio(pr);
     this.renderer.setSize(w, h, false);
     this.camera.aspect = w / h;

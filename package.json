@@ -7,9 +7,11 @@
     "dev": "vite --port 5173 --strictPort",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && cd dist && touch .nojekyll && git init -q -b gh-pages && git add -A && git -c user.name=pachichaaaan -c user.email=302585129+pachichaaaan@users.noreply.github.com commit -qm \"Deploy site\" && git push -qf https://github.com/pachichaaaan/dentalpro.git gh-pages"
+    "deploy": "vite build && cd dist && rm -rf .git && touch .nojekyll && git init -q -b gh-pages && git add -A && git -c user.name=pachichaaaan -c user.email=302585129+pachichaaaan@users.noreply.github.com commit -qm \"Deploy site\" && git push -qf https://github.com/pachichaaaan/dentalpro.git gh-pages"
   },
   "dependencies": {
+    "@fontsource-variable/manrope": "5.3.0",
+    "@fontsource/fraunces": "5.3.0",
     "gsap": "3.12.5",
     "lenis": "1.1.13",
     "three": "0.169.0"

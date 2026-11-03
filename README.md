@@ -51,4 +51,4 @@ This builds the site and replaces the `gh-pages` branch with the new `dist/`. Co
   - Restorations: https://unsplash.com/photos/SU6EGDd-ySQ
   - Dentures & bridges: https://unsplash.com/photos/LOgBp87WzIk
   - Share image (`og.jpg`): https://unsplash.com/photos/KzmhiJJ041M
-- Generated with Higgsfield: the 3D molar (`public/assets/model/tooth.glb`, original in `source-assets/`) and the portrait background cut-out. The earlier pearl/silk treatment artwork is kept in `source-assets/generated/`.
+- Generated with Higgsfield: the 3D molar (`public/assets/model/tooth.glb`) and the portrait background cut-out.
